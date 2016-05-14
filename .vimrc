@@ -1,7 +1,7 @@
 syntax on
 set background=dark
 colorscheme phoenix
-PhoenixYellow
+PhoenixOrange
 let g:molokai_original = 1
 let g:rehash = 1
 let g:lucius_no_term_bg = 1
