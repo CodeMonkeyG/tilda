@@ -43,4 +43,4 @@ autocmd VimEnter,Colorscheme * :IndentGuidesEnable
 autocmd VimEnter * NERDTree
 command -nargs=1 MS :mksession ~/vimsessions/<args>.vim 
 command -nargs=1 SS :mksession! ~/vimsessions/<args>.vim 
-command -nargs=1 LS :source ~/vimsessions/<args>.vim
+command -nargs=1 LS :source ~/vimsessions/<args>.vim | PhoenixOrange

@@ -175,6 +175,15 @@ if s:accent == "orange"
   hi Character                guifg=#C88623 guibg=NONE    gui=NONE      ctermfg=208
   hi Boolean                  guifg=#C88623 guibg=NONE    gui=NONE      ctermfg=208
   hi Number                   guifg=#C88623 guibg=NONE    gui=NONE      ctermfg=208
+
+  hi Normal                     guifg=#CCCCCC guibg=#191919 gui=NONE      ctermfg=166
+  hi Identifier                 guifg=#787878 guibg=NONE    gui=NONE      ctermfg=202
+  hi Special                    guifg=#EFEFEF guibg=NONE    gui=NONE      ctermfg=214
+  hi Statement                  guifg=#CCCCCC guibg=NONE    gui=NONE      ctermfg=214 cterm=bold
+  hi Title                      guifg=#CCCCCC guibg=NONE    gui=bold      ctermfg=214 cterm=bold
+  hi Operator                   guifg=#AAAAAA guibg=NONE    gui=NONE      ctermfg=246 cterm=bold
+  hi Function                   guifg=#EFEFEF guibg=NONE    gui=NONE      ctermfg=214 cterm=bold
+  hi Underlined                 guifg=#CCCCCC guibg=NONE    gui=underline ctermfg=250
 endif
 
 if s:accent == "purple"
