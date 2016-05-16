@@ -1,27 +1,35 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
-" set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
+if !empty(glob("~/.vim/bundle/Vundle.vim"))
+	" set the runtime path to include Vundle and initialize
+	call vundle#begin()
+	" alternatively, pass a path where Vundle should install plugins
+	"call vundle#begin('~/some/path/here')
 
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'scrooloose/nerdtree'
-Plugin 'scrooloose/syntastic'
-Plugin 'nathanaelkane/vim-indent-guides'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'groenewege/vim-less'
-Plugin 'othree/html5.vim'
-Plugin 'pangloss/vim-javascript'
-Plugin 'elzr/vim-json'
+	" let Vundle manage Vundle, required
+	Plugin 'VundleVim/Vundle.vim'
+	Plugin 'scrooloose/nerdtree'
+	Plugin 'scrooloose/syntastic'
+	Plugin 'nathanaelkane/vim-indent-guides'
+	Plugin 'vim-airline/vim-airline'
+	Plugin 'vim-airline/vim-airline-themes'
+	Plugin 'groenewege/vim-less'
+	Plugin 'othree/html5.vim'
+	Plugin 'pangloss/vim-javascript'
+	Plugin 'elzr/vim-json'
 
-call vundle#end()            " required
-filetype plugin indent on    " required
-
+	call vundle#end()            " required
+else
+	echo "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+	echo "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+	echo "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+	echo "You need to get Vundle - 'git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim'"
+	echo "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+	echo "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+	echo "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+endif
 
 syntax on
 
@@ -55,7 +63,7 @@ set paste
 set mouse=a
 set ffs=unix
 let php_folding=0
-filetype plugin on
+filetype plugin indent on
 autocmd BufNewFile,BufRead *.module set filetype=php
 autocmd BufNewFile,BufRead *.js.php set filetype=javascript
 autocmd BufNewFile,BufRead *.css.php set filetype=css
