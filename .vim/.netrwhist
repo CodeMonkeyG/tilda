@@ -1,11 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =9
-let g:netrw_dirhist_1='/Users/codemonkeyg/Repos/KYC/api/application/core'
-let g:netrw_dirhist_2='/Users/codemonkeyg/Repos/KYC/api/application'
-let g:netrw_dirhist_3='/Users/codemonkeyg/Repos/KYC/api/application/controllers'
-let g:netrw_dirhist_4='/Users/codemonkeyg/Repos/KYC/api/application'
-let g:netrw_dirhist_5='/Users/codemonkeyg/Repos/KYC/api/application/models'
-let g:netrw_dirhist_6='/Users/codemonkeyg'
-let g:netrw_dirhist_7='/Users/codemonkeyg/.vim/colors'
-let g:netrw_dirhist_8='/Users/codemonkeyg/.vim'
-let g:netrw_dirhist_9='/Users/codemonkeyg'
+let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_1='/Users/codemonkeyg/.vim/bundle/vim-airline-themes'
+let g:netrw_dirhist_2='/Users/codemonkeyg/.vim/bundle'
+let g:netrw_dirhist_3='/Users/codemonkeyg/.vim'
+let g:netrw_dirhist_4='/Users/codemonkeyg/.vim/colors'
