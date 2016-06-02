@@ -12,8 +12,8 @@ if !empty(glob("~/.vim/bundle/Vundle.vim"))
  Plugin 'VundleVim/Vundle.vim'
  Plugin 'scrooloose/nerdtree'
  Plugin 'scrooloose/syntastic'
- Plugin 'nathanaelkane/vim-indent-guides'
  Plugin 'vim-airline/vim-airline'
+ Plugin 'yggdroot/indentline'
  Plugin 'vim-airline/vim-airline-themes'
  Plugin 'groenewege/vim-less'
  Plugin 'othree/html5.vim'
@@ -50,13 +50,11 @@ let g:vimsyn_folding='afmpPrt'
 let php_folding=0
 
 set autoindent
-set background=dark
 set backspace=indent,eol,start
 set cindent
-set cursorline
 set expandtab
 set ffs=unix
-set foldmethod=syntax
+set foldmethod=indent
 set incsearch
 set mouse=a
 set noeol
@@ -83,13 +81,10 @@ autocmd BufNewFile,BufRead *.css.php set filetype=css
 autocmd BufNewFile,BufRead *.css set nocindent
 autocmd BufNewFile,BufRead *.css.php set nocindent
 autocmd VimEnter * :PhoenixOrange
-autocmd VimEnter * :IndentGuidesEnable
 autocmd VimEnter * :NERDTree
 autocmd VimEnter * :AirlineTheme monochrome
+autocmd VimEnter * :NoMatchParen
 
 command -nargs=1 MS :mksession ~/vimsessions/<args>.vim
 command -nargs=1 SS :mksession! ~/vimsessions/<args>.vim
 command -nargs=1 LS :source ~/vimsessions/<args>.vim | PhoenixOrange
-
-hi IndentGuidesOdd ctermbg=008
-hi IndentGuidesEven ctermbg=245
