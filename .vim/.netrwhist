@@ -1,4 +1,10 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =2
-let g:netrw_dirhist_1='/Users/codemonkeyg/.vim/colors'
-let g:netrw_dirhist_2='/Users/codemonkeyg/Repos/KYC/app/html/view-templates'
+let g:netrw_dirhist_cnt =8
+let g:netrw_dirhist_1='/Users/codemonkeyg/tilda'
+let g:netrw_dirhist_2='/Users/codemonkeyg'
+let g:netrw_dirhist_3='/Users/codemonkeyg/.vim'
+let g:netrw_dirhist_4='/Users/codemonkeyg/.vim/colors'
+let g:netrw_dirhist_5='/Users/codemonkeyg'
+let g:netrw_dirhist_6='/Users/codemonkeyg/tilda'
+let g:netrw_dirhist_7='/Users/codemonkeyg/tilda/.vim'
+let g:netrw_dirhist_8='/Users/codemonkeyg/tilda/.vim/colors'
