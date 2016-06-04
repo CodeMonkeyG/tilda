@@ -6,4 +6,7 @@ ln -s ~/tilda/.viminfo ~/.viminfo
 ln -s ~/tilda/.tmux.conf ~/.tmux.conf
 ln -s ~/tilda/.tmux ~/.tmux
 
-python ~/.vim/bundle/youcompleteme/install.py
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+python ~/.vim/bundle/youcompleteme/install.py --all
+
+
