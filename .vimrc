@@ -84,7 +84,7 @@ autocmd BufNewFile,BufRead *.css.php set filetype=css
 autocmd BufNewFile,BufRead *.css set nocindent
 autocmd BufNewFile,BufRead *.css.php set nocindent
 autocmd VimEnter * :NERDTree
-autocmd VimEnter * :AirlineTheme zenburn
+autocmd VimEnter * :AirlineTheme base16
 autocmd VimEnter * :IndentGuidesEnable
 autocmd VimEnter * :NoMatchParen
 
