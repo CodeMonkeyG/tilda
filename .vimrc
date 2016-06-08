@@ -86,7 +86,6 @@ autocmd BufNewFile,BufRead *.css.php set nocindent
 autocmd VimEnter * :NERDTree
 autocmd VimEnter * :AirlineTheme base16
 autocmd VimEnter * :IndentGuidesEnable
-autocmd VimEnter * :NoMatchParen
 
 command -nargs=1 MS :mksession ~/vimsessions/<args>.vim
 command -nargs=1 SS :mksession! ~/vimsessions/<args>.vim
