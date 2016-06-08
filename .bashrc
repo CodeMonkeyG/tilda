@@ -1,3 +1,5 @@
-alias lst="ls -lath"
-alias lsa="ls -lah"
-alias ll="ls -lah"
+alias ..="cd .."
+alias df="df -Tha --total"
+alias du="du -ach | sort -h"
+alias ll="ls -lhA"
+alias mkdir="mkdir -pv"
