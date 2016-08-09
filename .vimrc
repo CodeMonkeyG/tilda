@@ -10,7 +10,6 @@ if !empty(glob("~/.vim/bundle/Vundle.vim"))
 
  " let Vundle manage Vundle, required
  Plugin 'VundleVim/Vundle.vim'
- Plugin 'scrooloose/nerdtree'
  Plugin 'vim-airline/vim-airline'
  Plugin 'nathanaelkane/vim-indent-guides'
  Plugin 'vim-airline/vim-airline-themes'
@@ -35,9 +34,10 @@ syntax on
 
 colorscheme gruvbox
 
-let g:lucius_no_term_bg = 1
-let g:molokai_original = 1
-let g:rehash = 1
+let g:lucius_no_term_bg=1
+let g:netrw_liststyle=3
+let g:molokai_original=1
+let g:rehash=1
 let g:vimsyn_folding='afmpPrt'
 let php_folding=0
 
@@ -68,8 +68,6 @@ set smartcase
 set smarttab
 set softtabstop=1
 set splitbelow
-set splitbelow
-set splitright
 set splitright
 set tabstop=1
 set t_Co=256
@@ -83,7 +81,6 @@ autocmd BufNewFile,BufRead *.js.php set filetype=javascript
 autocmd BufNewFile,BufRead *.css.php set filetype=css
 autocmd BufNewFile,BufRead *.css set nocindent
 autocmd BufNewFile,BufRead *.css.php set nocindent
-autocmd VimEnter * :NERDTree
 autocmd VimEnter * :AirlineTheme base16
 autocmd VimEnter * :IndentGuidesEnable
 
