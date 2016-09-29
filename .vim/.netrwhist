@@ -1,6 +1,5 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =4
-let g:netrw_dirhist_1='/Users/codemonkeyg/Repos/KYC/app/js/backbone/base'
-let g:netrw_dirhist_2='/Users/codemonkeyg/Repos/KYC/api'
-let g:netrw_dirhist_3='/Users/codemonkeyg/Repos/KYC/api/application'
-let g:netrw_dirhist_4='/Users/codemonkeyg/Repos/KYC/api/application/models'
+let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_1='/Users/codemonkeyg/Repos/KYC/node-api/collections'
+let g:netrw_dirhist_2='/Users/codemonkeyg/Repos/KYC'
+let g:netrw_dirhist_3='/Users/codemonkeyg/Repos/KYC/node-api/collections'
