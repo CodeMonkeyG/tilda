@@ -18,6 +18,7 @@ if !empty(glob("~/.vim/bundle/Vundle.vim"))
  Plugin 'pangloss/vim-javascript'
  Plugin 'elzr/vim-json'
  Plugin 'valloric/youcompleteme'
+ Plugin 'ctrlpvim/ctrlp.vim'
 
  call vundle#end()            " required
 else
@@ -34,9 +35,13 @@ syntax on
 
 colorscheme gruvbox
 
+let g:ctrlp_cmd='CtrlP'
+let g:ctrlp_map='<c-p>'
+let g:ctrlp_working_path_mode='ra'
 let g:lucius_no_term_bg=1
-let g:netrw_liststyle=3
 let g:molokai_original=1
+let g:netrw_banner=0
+let g:netrw_liststyle=3
 let g:rehash=1
 let g:vimsyn_folding='afmpPrt'
 let php_folding=0
@@ -81,7 +86,7 @@ autocmd BufNewFile,BufRead *.js.php set filetype=javascript
 autocmd BufNewFile,BufRead *.css.php set filetype=css
 autocmd BufNewFile,BufRead *.css set nocindent
 autocmd BufNewFile,BufRead *.css.php set nocindent
-autocmd VimEnter * :AirlineTheme base16
+autocmd VimEnter * :AirlineTheme base16color
 autocmd VimEnter * :IndentGuidesEnable
 
 command -nargs=1 MS :mksession ~/vimsessions/<args>.vim
