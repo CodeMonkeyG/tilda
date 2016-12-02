@@ -49,6 +49,6 @@ function parse_git_dirty {
 	fi
 }
 
-export PS1="\n┏ \[\e[31m\]\d @ \@\[\e[m\]\n┣ \[\e[36m\][\w]\[\e[m\]\n┗ \[\e[32m\]\u\[\e[m\]\[\e[33m\]\`parse_git_branch\`\[\e[m\]\[\e[36m\] $ \[\e[m\]"
+export PS1="\n┏ \[\e[31m\]\d @ \@\[\e[m\]\n┣ \[\e[36m\][\w]\[\e[m\]\n┗ \[\e[32m\]\u @ \h\[\e[m\]\[\e[33m\]\`parse_git_branch\`\[\e[m\]\[\e[36m\] $ \[\e[m\]"
 
 archey -o
