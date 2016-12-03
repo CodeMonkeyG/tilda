@@ -67,6 +67,7 @@ set noswapfile
 set nowa
 set number
 set paste
+set readonly!
 set runtimepath+=$HOME~/.vim/j
 set shiftwidth=1
 set smartcase

@@ -1,5 +1,5 @@
 let g:netrw_dirhistmax  =10
 let g:netrw_dirhist_cnt =3
-let g:netrw_dirhist_1='/Users/codemonkeyg/Repos/KYC/node-api/collections'
-let g:netrw_dirhist_2='/Users/codemonkeyg/Repos/KYC'
-let g:netrw_dirhist_3='/Users/codemonkeyg/Repos/KYC/node-api/collections'
+let g:netrw_dirhist_1='/Users/codemonkeyg/Repos/KYC/app/js/kyc'
+let g:netrw_dirhist_2='/Users/codemonkeyg/Repos/KYC/app/js/kyc/collections'
+let g:netrw_dirhist_3='/Users/codemonkeyg/Repos/KYC/app/html/view-templates'
