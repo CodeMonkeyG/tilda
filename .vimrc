@@ -17,7 +17,7 @@ if !empty(glob("~/.vim/bundle/Vundle.vim"))
  Plugin 'othree/html5.vim'
  Plugin 'pangloss/vim-javascript'
  Plugin 'elzr/vim-json'
- Plugin 'valloric/youcompleteme'
+ " Plugin 'valloric/youcompleteme'
  Plugin 'ctrlpvim/ctrlp.vim'
 
  call vundle#end()            " required
@@ -53,7 +53,6 @@ set cindent
 set clipboard=unnamed
 set copyindent
 set cursorline
-set expandtab
 set ffs=unix
 set foldmethod=indent
 set ignorecase
@@ -69,13 +68,13 @@ set number
 set paste
 set readonly!
 set runtimepath+=$HOME~/.vim/j
-set shiftwidth=1
+set shiftwidth=2
 set smartcase
 set smarttab
-set softtabstop=1
+set softtabstop=2
 set splitbelow
 set splitright
-set tabstop=1
+set tabstop=2
 set t_Co=256
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip
 set write
