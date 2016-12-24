@@ -3,10 +3,9 @@ filetype off                  " required
 
 set rtp+=~/.vim/bundle/Vundle.vim
 if !empty(glob("~/.vim/bundle/Vundle.vim"))
- " set the runtime path to include Vundle and initialize
- call vundle#begin()
+ " set the runtime path to include Vundle and initialize call vundle#begin()
  " alternatively, pass a path where Vundle should install plugins
- "call vundle#begin('~/some/path/here')
+ call vundle#begin()
 
  " let Vundle manage Vundle, required
  Plugin 'VundleVim/Vundle.vim'
@@ -35,6 +34,10 @@ syntax on
 
 colorscheme gruvbox
 
+let g:airline#extensions#tabline#buffer_idx_mode=1
+let g:airline#extensions#tabline#enabled=1
+let g:airline#extensions#tabline#show_buffers=0
+let g:airline#extensions#tabline#show_tabs=1
 let g:ctrlp_cmd='CtrlP'
 let g:ctrlp_map='<c-p>'
 let g:ctrlp_working_path_mode='ra'
@@ -45,6 +48,20 @@ let g:netrw_liststyle=3
 let g:rehash=1
 let g:vimsyn_folding='afmpPrt'
 let php_folding=0
+
+nmap <leader>1 <Plug>AirlineSelectTab1
+nmap <leader>2 <Plug>AirlineSelectTab2
+nmap <leader>3 <Plug>AirlineSelectTab3
+nmap <leader>4 <Plug>AirlineSelectTab4
+nmap <leader>5 <Plug>AirlineSelectTab5
+nmap <leader>6 <Plug>AirlineSelectTab6
+nmap <leader>7 <Plug>AirlineSelectTab7
+nmap <leader>8 <Plug>AirlineSelectTab8
+nmap <leader>9 <Plug>AirlineSelectTab9
+nmap <leader>- <Plug>AirlineSelectPrevTab
+nmap <leader>+ <Plug>AirlineSelectNextTab
+nmap <leader>n :tabnew<cr>
+nmap <leader>q :tabclose<cr>
 
 set autoindent
 set background=dark
