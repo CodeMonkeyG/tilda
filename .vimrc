@@ -16,6 +16,7 @@ if !empty(glob("~/.vim/bundle/Vundle.vim"))
  Plugin 'othree/html5.vim'
  Plugin 'pangloss/vim-javascript'
  Plugin 'elzr/vim-json'
+ Plugin 'yuttie/comfortable-motion.vim'
  " Plugin 'valloric/youcompleteme'
  Plugin 'ctrlpvim/ctrlp.vim'
 
