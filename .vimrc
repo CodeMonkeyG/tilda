@@ -16,7 +16,6 @@ if !empty(glob("~/.vim/bundle/Vundle.vim"))
  Plugin 'othree/html5.vim'
  Plugin 'pangloss/vim-javascript'
  Plugin 'elzr/vim-json'
- Plugin 'yuttie/comfortable-motion.vim'
  " Plugin 'valloric/youcompleteme'
  Plugin 'ctrlpvim/ctrlp.vim'
 
@@ -47,8 +46,6 @@ let g:molokai_original=1
 let g:netrw_banner=0
 let g:netrw_liststyle=3
 let g:rehash=1
-let g:vimsyn_folding='afmpPrt'
-let php_folding=0
 
 nmap <leader>1 <Plug>AirlineSelectTab1
 nmap <leader>2 <Plug>AirlineSelectTab2
