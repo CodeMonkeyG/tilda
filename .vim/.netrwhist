@@ -1,6 +1,2 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =4
-let g:netrw_dirhist_1='/Users/codemonkeyg/Repos/KYC/app/js/kyc'
-let g:netrw_dirhist_2='/Users/codemonkeyg/Repos/KYC/app/js/kyc/collections'
-let g:netrw_dirhist_3='/Users/codemonkeyg/Repos/KYC/app/html/view-templates'
-let g:netrw_dirhist_4='/Users/codemonkeyg/tilda/.vim/bundle'
+let g:netrw_dirhist_cnt =0
