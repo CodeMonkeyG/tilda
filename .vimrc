@@ -16,8 +16,9 @@ if !empty(glob("~/.vim/bundle/Vundle.vim"))
  Plugin 'othree/html5.vim'
  Plugin 'pangloss/vim-javascript'
  Plugin 'elzr/vim-json'
- " Plugin 'valloric/youcompleteme'
+ Plugin 'yuttie/comfortable-motion.vim'
  Plugin 'ctrlpvim/ctrlp.vim'
+ Plugin 'jiangmiao/auto-pairs'
 
  call vundle#end()            " required
 else
@@ -45,7 +46,6 @@ let g:lucius_no_term_bg=1
 let g:molokai_original=1
 let g:netrw_banner=0
 let g:netrw_liststyle=3
-let g:netrw_winsize = 15
 let g:rehash=1
 
 nmap <leader>1 <Plug>AirlineSelectTab1
@@ -90,6 +90,7 @@ set smarttab
 set softtabstop=2
 set splitbelow
 set splitright
+set ttyfast
 set tabstop=2
 set t_Co=256
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip
