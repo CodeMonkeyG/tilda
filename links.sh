@@ -6,9 +6,10 @@ ln -s ~/tilda/.vimrc ~/.vimrc
 ln -s ~/tilda/.viminfo ~/.viminfo
 ln -s ~/tilda/.tmux.conf ~/.tmux.conf
 ln -s ~/tilda/.tmux ~/.tmux
+ln -s ~/tilda/.kwm ~/.kwm
+
 
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-python ~/.vim/bundle/youcompleteme/install.py --all
 
 
