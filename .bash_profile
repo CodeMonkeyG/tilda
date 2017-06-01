@@ -1,3 +1,6 @@
+command_exists () {
+	type "$1" &> /dev/null ;
+}
 if [ -f ~/.bashrc ]; then
    source ~/.bashrc
 fi
@@ -55,4 +58,6 @@ export PS1="\n┏ \[\e[31m\]\d @ \@\[\e[m\]\n┣ \[\e[36m\][\w]\[\e[m\]\n┗ \[\
 
 eval "$(thefuck --alias)"
 
-archey -o
+if command_exists neofetch ; then
+	neofetch
+fi

@@ -19,6 +19,8 @@ if !empty(glob("~/.vim/bundle/Vundle.vim"))
  Plugin 'yuttie/comfortable-motion.vim'
  Plugin 'ctrlpvim/ctrlp.vim'
  Plugin 'jiangmiao/auto-pairs'
+ Plugin 'scrooloose/nerdtree'
+ Plugin 'jistr/vim-nerdtree-tabs'
 
  call vundle#end()            " required
 else
@@ -47,6 +49,7 @@ let g:molokai_original=1
 let g:netrw_banner=0
 let g:netrw_liststyle=3
 let g:rehash=1
+let g:nerdtree_tabs_open_on_console_startup=1
 
 nmap <leader>1 <Plug>AirlineSelectTab1
 nmap <leader>2 <Plug>AirlineSelectTab2
@@ -105,6 +108,10 @@ autocmd BufNewFile,BufRead *.css set nocindent
 autocmd BufNewFile,BufRead *.css.php set nocindent
 autocmd VimEnter * :AirlineTheme base16color
 autocmd VimEnter * :IndentGuidesEnable
+autocmd VimEnter * :NERDTree
+autocmd VimEnter * :NERDTreeTabsOpen
+autocmd InsertEnter * if !exists('w:last_fdm') | let w:last_fdm=&foldmethod | setlocal foldmethod=manual | endif
+autocmd InsertLeave,WinLeave * if exists('w:last_fdm') | let &l:foldmethod=w:last_fdm | unlet w:last_fdm | endif
 
 command -nargs=1 MS :mksession ~/vimsessions/<args>.vim
 command -nargs=1 SS :mksession! ~/vimsessions/<args>.vim
