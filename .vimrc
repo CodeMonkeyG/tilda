@@ -9,6 +9,7 @@ if !empty(glob("~/.vim/bundle/Vundle.vim"))
 
  " let Vundle manage Vundle, required
  Plugin 'VundleVim/Vundle.vim'
+ Plugin 'yuttie/comfortable-motion.vim'
  Plugin 'vim-airline/vim-airline'
  Plugin 'nathanaelkane/vim-indent-guides'
  Plugin 'vim-airline/vim-airline-themes'
@@ -16,11 +17,10 @@ if !empty(glob("~/.vim/bundle/Vundle.vim"))
  Plugin 'othree/html5.vim'
  Plugin 'pangloss/vim-javascript'
  Plugin 'elzr/vim-json'
- Plugin 'yuttie/comfortable-motion.vim'
  Plugin 'ctrlpvim/ctrlp.vim'
- Plugin 'jiangmiao/auto-pairs'
  Plugin 'scrooloose/nerdtree'
  Plugin 'jistr/vim-nerdtree-tabs'
+ Plugin 'exvim/ex-autocomplpop'
 
  call vundle#end()            " required
 else
@@ -44,12 +44,17 @@ let g:airline#extensions#tabline#show_tabs=1
 let g:ctrlp_cmd='CtrlP'
 let g:ctrlp_map='<c-p>'
 let g:ctrlp_working_path_mode='ra'
+let g:ctrlp_cache_dir = '~/.cache/ctrlp'
 let g:lucius_no_term_bg=1
 let g:molokai_original=1
 let g:netrw_banner=0
 let g:netrw_liststyle=3
 let g:rehash=1
 let g:nerdtree_tabs_open_on_console_startup=1
+
+if executable('ag')
+  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+endif
 
 nmap <leader>1 <Plug>AirlineSelectTab1
 nmap <leader>2 <Plug>AirlineSelectTab2
@@ -70,6 +75,7 @@ set background=dark
 set backspace=indent,eol,start
 set cindent
 set clipboard=unnamed
+set conceallevel=0
 set copyindent
 set cursorline
 set ffs=unix
@@ -110,6 +116,7 @@ autocmd VimEnter * :AirlineTheme base16color
 autocmd VimEnter * :IndentGuidesEnable
 autocmd VimEnter * :NERDTree
 autocmd VimEnter * :NERDTreeTabsOpen
+autocmd VimEnter * :wincmd l
 autocmd InsertEnter * if !exists('w:last_fdm') | let w:last_fdm=&foldmethod | setlocal foldmethod=manual | endif
 autocmd InsertLeave,WinLeave * if exists('w:last_fdm') | let &l:foldmethod=w:last_fdm | unlet w:last_fdm | endif
 
@@ -119,3 +126,8 @@ command -nargs=1 LS :source ~/vimsessions/<args>.vim
 
 hi IndentGuidesOdd ctermbg=234
 hi IndentGuidesEven ctermbg=236
+
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
