@@ -7,6 +7,7 @@ ln -s ~/tilda/.viminfo ~/.viminfo
 ln -s ~/tilda/.tmux.conf ~/.tmux.conf
 ln -s ~/tilda/.tmux ~/.tmux
 ln -s ~/tilda/.kwm ~/.kwm
+ln -s ~/tilda/.config ~/.config
 
 
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
