@@ -20,6 +20,7 @@ if !empty(glob("~/.vim/bundle/Vundle.vim"))
  Plugin 'ctrlpvim/ctrlp.vim'
  Plugin 'scrooloose/nerdtree'
  Plugin 'jistr/vim-nerdtree-tabs'
+
  Plugin 'exvim/ex-autocomplpop'
 
  call vundle#end()            " required
