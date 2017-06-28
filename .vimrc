@@ -19,9 +19,12 @@ if !empty(glob("~/.vim/bundle/Vundle.vim"))
  Plugin 'elzr/vim-json'
  Plugin 'ctrlpvim/ctrlp.vim'
  Plugin 'scrooloose/nerdtree'
+ Plugin 'airblade/vim-gitgutter'
  Plugin 'jistr/vim-nerdtree-tabs'
 
  Plugin 'exvim/ex-autocomplpop'
+ Plugin 'bronson/vim-trailing-whitespace'
+ Plugin 'Xuyuanp/nerdtree-git-plugin'
 
  call vundle#end()            " required
 else
@@ -111,8 +114,10 @@ filetype plugin indent on
 autocmd BufNewFile,BufRead *.module set filetype=php
 autocmd BufNewFile,BufRead *.js.php set filetype=javascript
 autocmd BufNewFile,BufRead *.css.php set filetype=css
-autocmd BufNewFile,BufRead *.css set nocindent
 autocmd BufNewFile,BufRead *.css.php set nocindent
+autocmd BufNewFile,BufRead *.css set nocindent
+autocmd BufNewFile,BufRead *.json set conceallevel=0
+autocmd BufWritePre * :FixWhitespace
 autocmd VimEnter * :AirlineTheme base16color
 autocmd VimEnter * :IndentGuidesEnable
 autocmd VimEnter * :NERDTree
