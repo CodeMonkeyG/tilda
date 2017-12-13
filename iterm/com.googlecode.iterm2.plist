@@ -6,12 +6,16 @@
 	<true/>
 	<key>AboutToPasteTabsWithCancel_selection</key>
 	<integer>2</integer>
+	<key>AlternateMouseScroll</key>
+	<true/>
 	<key>AppleAntiAliasingThreshold</key>
 	<integer>1</integer>
 	<key>AppleScrollAnimationEnabled</key>
 	<integer>0</integer>
 	<key>AppleSmoothFixedFontsSizeThreshold</key>
 	<integer>1</integer>
+	<key>AppleWindowTabbingMode</key>
+	<string>manual</string>
 	<key>Custom Color Presets</key>
 	<dict>
 		<key>gruvbox</key>
@@ -358,7 +362,17 @@
 	</dict>
 	<key>Default Bookmark Guid</key>
 	<string>42F8F705-4EB9-45D7-8ECC-EE59DC5AB59E</string>
+	<key>DimBackgroundWindows</key>
+	<true/>
+	<key>DimInactiveSplitPanes</key>
+	<false/>
+	<key>DimOnlyText</key>
+	<true/>
 	<key>DisableFullscreenTransparency</key>
+	<false/>
+	<key>EnableDivisionView</key>
+	<false/>
+	<key>EnableProxyIcon</key>
 	<false/>
 	<key>FlashTabBarInFullscreen</key>
 	<true/>
@@ -470,9 +484,13 @@
 	<key>HideMenuBarInFullscreen</key>
 	<true/>
 	<key>HideScrollbar</key>
+	<true/>
+	<key>HideTabCloseButton</key>
 	<false/>
 	<key>HotkeyMigratedFromSingleToMulti</key>
 	<true/>
+	<key>JobName</key>
+	<false/>
 	<key>LoadPrefsFromCustomFolder</key>
 	<true/>
 	<key>NSFontPanelAttributes</key>
@@ -496,7 +514,7 @@
 	gAKACoAN0xAJChEVGVdOUy5rZXlzoxITFIADgASABaMWFxiABoAHgAiACVpJZGVudGlm
 	aWVyVVdpZHRoVkhpZGRlblEwI0BowAAAAAAACNIhIiMkWiRjbGFzc25hbWVYJGNsYXNz
 	ZXNcTlNEaWN0aW9uYXJ5oiMlWE5TT2JqZWN00xAJCicrGaMSExSAA4AEgAWjLC0YgAuA
-	DIAIgAlRMSNAdCAAAAAAANIhIjM0Xk5TTXV0YWJsZUFycmF5ozM1JVdOU0FycmF5XxAP
+	DIAIgAlRMSNAdKAAAAAAANIhIjM0Xk5TTXV0YWJsZUFycmF5ozM1JVdOU0FycmF5XxAP
 	TlNLZXllZEFyY2hpdmVy0Tg5VUFycmF5gAEACAARABoAIwAtADIANwBGAEwAUQBcAGMA
 	ZgBoAGoAbABzAHsAfwCBAIMAhQCJAIsAjQCPAJEAnACiAKkAqwC0ALUAugDFAM4A2wDe
 	AOcA7gDyAPQA9gD4APwA/gEAAQIBBAEGAQ8BFAEjAScBLwFBAUQBSgAAAAAAAAIBAAAA
@@ -520,27 +538,39 @@
 	<key>NSWindow Frame NSColorPanel</key>
 	<string>385 383 224 325 0 0 1920 1200 </string>
 	<key>NSWindow Frame NSFontPanel</key>
-	<string>779 102 1078 444 0 0 2560 1080 </string>
+	<string>1055 356 1078 310 0 0 2560 1080 </string>
 	<key>NSWindow Frame Preferences</key>
 	<string>273 347 924 485 0 0 1920 1200 </string>
+	<key>NSWindow Frame SUUpdateAlert</key>
+	<string>930 427 700 512 0 0 2560 1080 </string>
+	<key>NSWindow Frame SessionsPreferences</key>
+	<string>269 126 606 469 0 0 2560 1080 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>688 180 918 512 0 0 2560 1080 </string>
+	<string>887 316 796 473 0 0 2560 1080 </string>
+	<key>NSWindow Frame UKCrashReporter</key>
+	<string>467 355 592 584 0 0 2560 1080 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>22 21 2516 1039 0 0 2560 1080 </string>
+	<string>20 28 1396 852 0 0 1440 900 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>1288 28 1249 499 0 0 2560 1080 </string>
+	<string>1288 148 570 379 0 0 2560 1080 </string>
+	<key>NSWindow Frame iTerm Window 10</key>
+	<string>1254 -872 689 409 526 -900 1440 900 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
 	<string>1288 21 1249 1039 0 0 2560 1080 </string>
 	<key>NSWindow Frame iTerm Window 3</key>
-	<string>21 28 1249 499 0 0 2560 1080 </string>
+	<string>20 548 1536 512 0 0 2560 1080 </string>
 	<key>NSWindow Frame iTerm Window 4</key>
-	<string>1084 28 332 409 0 0 1440 900 </string>
+	<string>23 10 1249 1040 0 0 2560 1080 </string>
 	<key>NSWindow Frame iTerm Window 5</key>
-	<string>1288 21 1249 1039 0 0 2560 1080 </string>
+	<string>656 555 612 499 0 0 2560 1080 </string>
 	<key>NSWindow Frame iTerm Window 6</key>
 	<string>1288 28 1249 499 0 0 2560 1080 </string>
 	<key>NSWindow Frame iTerm Window 7</key>
-	<string>22 21 2516 1039 0 0 2560 1080 </string>
+	<string>901 -439 157 199 526 -900 1440 900 </string>
+	<key>NSWindow Frame iTerm Window 8</key>
+	<string>902 -439 332 199 526 -900 1440 900 </string>
+	<key>NSWindow Frame iTerm Window 9</key>
+	<string>1254 -872 689 409 526 -900 1440 900 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -757,7 +787,7 @@
 				<real>0.99404627084732056</real>
 			</dict>
 			<key>BM Growl</key>
-			<true/>
+			<false/>
 			<key>Background Color</key>
 			<dict>
 				<key>Alpha Component</key>
@@ -789,9 +819,9 @@
 			<key>Blinking Cursor</key>
 			<true/>
 			<key>Blur</key>
-			<false/>
+			<true/>
 			<key>Blur Radius</key>
-			<real>0.10000000000000001</real>
+			<real>30</real>
 			<key>Bold Color</key>
 			<dict>
 				<key>Alpha Component</key>
@@ -810,7 +840,7 @@
 			<key>Close Sessions On End</key>
 			<true/>
 			<key>Columns</key>
-			<integer>80</integer>
+			<integer>124</integer>
 			<key>Command</key>
 			<string></string>
 			<key>Cursor Boost</key>
@@ -1199,19 +1229,21 @@
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>Monaco 11</string>
+			<string>AndaleMono 12</string>
 			<key>Only The Default BG Color Uses Transparency</key>
 			<false/>
 			<key>Option Key Sends</key>
 			<integer>0</integer>
+			<key>Prevent Opening in a Tab</key>
+			<true/>
 			<key>Prompt Before Closing 2</key>
 			<false/>
 			<key>Right Option Key Sends</key>
 			<integer>0</integer>
 			<key>Rows</key>
-			<integer>25</integer>
+			<integer>50</integer>
 			<key>Screen</key>
-			<integer>-1</integer>
+			<integer>-2</integer>
 			<key>Scrollback Lines</key>
 			<integer>1000</integer>
 			<key>Selected Text Color</key>
@@ -1248,6 +1280,8 @@
 			<true/>
 			<key>Silence Bell</key>
 			<false/>
+			<key>Space</key>
+			<integer>0</integer>
 			<key>Sync Title</key>
 			<false/>
 			<key>Tags</key>
@@ -1257,7 +1291,7 @@
 			<key>Thin Strokes</key>
 			<integer>0</integer>
 			<key>Transparency</key>
-			<real>0.080163388324873089</real>
+			<real>0.25126903553299496</real>
 			<key>Unicode Version</key>
 			<integer>9</integer>
 			<key>Unlimited Scrollback</key>
@@ -1273,7 +1307,7 @@
 			<key>Vertical Spacing</key>
 			<real>1</real>
 			<key>Visual Bell</key>
-			<true/>
+			<false/>
 			<key>Window Type</key>
 			<integer>0</integer>
 			<key>Working Directory</key>
@@ -1297,6 +1331,10 @@
 	<key>NoSyncTimeOfLastPromoDownload</key>
 	<real>486541447.59556198</real>
 	<key>OnlyWhenMoreTabs</key>
+	<false/>
+	<key>OpenArrangementAtStartup</key>
+	<false/>
+	<key>OpenNoWindowsAtStartup</key>
 	<false/>
 	<key>PMPrintingExpandedStateForPrint2</key>
 	<false/>
@@ -1354,23 +1392,33 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2017-05-17T12:20:24Z</date>
+	<date>2017-12-08T00:40:23Z</date>
+	<key>ShowBookmarkName</key>
+	<false/>
 	<key>ShowFullScreenTabBar</key>
-	<true/>
+	<false/>
 	<key>ShowNewOutputIndicator</key>
 	<true/>
 	<key>ShowPaneTitles</key>
-	<true/>
+	<false/>
+	<key>SplitPaneDimmingAmount</key>
+	<real>0.25064102564102564</real>
 	<key>TabStyle</key>
-	<integer>0</integer>
+	<integer>1</integer>
+	<key>TabViewType</key>
+	<integer>2</integer>
+	<key>UKCrashReporterLastCrashReportDate</key>
+	<real>1495119616</real>
 	<key>UseBorder</key>
+	<false/>
+	<key>WindowNumber</key>
 	<false/>
 	<key>WordCharacters</key>
 	<string>/-+\~_.</string>
 	<key>findMode_iTerm</key>
 	<integer>0</integer>
 	<key>iTerm Version</key>
-	<string>3.1.git.604f138b6b</string>
+	<string>3.1.5</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>0</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>

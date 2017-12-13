@@ -1,13 +1,13 @@
 #!/bin/bash
-ln -s ~/tilda/.bashrc ~/.bashrc
-ln -s ~/tilda/.bash_profile ~/.bash_profile
-ln -s ~/tilda/.vim ~/.vim
-ln -s ~/tilda/.vimrc ~/.vimrc
-ln -s ~/tilda/.viminfo ~/.viminfo
-ln -s ~/tilda/.tmux.conf ~/.tmux.conf
-ln -s ~/tilda/.tmux ~/.tmux
-ln -s ~/tilda/.kwm ~/.kwm
-ln -s ~/tilda/.config ~/.config
+ln -s ~/tilde/.bashrc ~/.bashrc
+ln -s ~/tilde/.bash_profile ~/.bash_profile
+ln -s ~/tilde/.vim ~/.vim
+ln -s ~/tilde/.vimrc ~/.vimrc
+ln -s ~/tilde/.viminfo ~/.viminfo
+ln -s ~/tilde/.tmux.conf ~/.tmux.conf
+ln -s ~/tilde/.tmux ~/.tmux
+ln -s ~/tilde/.kwm ~/.kwm
+ln -s ~/tilde/.config ~/.config
 
 
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm

@@ -54,6 +54,7 @@ kwmc config lock-to-container on
 
 # Set focus-follows-mouse-mode to autoraise
 kwmc config focus-follows-mouse off
+kwmc config mouse-follows-focus on
 
 /*
     Focus-follows-mouse is temporarily disabled when
@@ -68,7 +69,6 @@ kwmc config center-on-float on
     The mouse will automatically move to the center
     of the focused window
 */
-kwmc config mouse-follows-focus on
 
 /*
     Allows a window to be moved by draggingff
@@ -140,3 +140,5 @@ kwmc config border marked on
 kwmc config border marked size 2
 kwmc config border marked color 0xFFCC5577
 kwmc config border marked radius 6
+
+kwmc config prefix-global enable

@@ -3,38 +3,38 @@ filetype off                  " required
 
 set rtp+=~/.vim/bundle/Vundle.vim
 if !empty(glob("~/.vim/bundle/Vundle.vim"))
- " set the runtime path to include Vundle and initialize call vundle#begin()
- " alternatively, pass a path where Vundle should install plugins
- call vundle#begin()
+	" set the runtime path to include Vundle and initialize call vundle#begin()
+	" alternatively, pass a path where Vundle should install plugins
+	call vundle#begin()
 
- " let Vundle manage Vundle, required
- Plugin 'VundleVim/Vundle.vim'
- Plugin 'yuttie/comfortable-motion.vim'
- Plugin 'vim-airline/vim-airline'
- Plugin 'nathanaelkane/vim-indent-guides'
- Plugin 'vim-airline/vim-airline-themes'
- Plugin 'groenewege/vim-less'
- Plugin 'othree/html5.vim'
- Plugin 'pangloss/vim-javascript'
- Plugin 'elzr/vim-json'
- Plugin 'ctrlpvim/ctrlp.vim'
- Plugin 'scrooloose/nerdtree'
- Plugin 'airblade/vim-gitgutter'
- Plugin 'jistr/vim-nerdtree-tabs'
+	" let Vundle manage Vundle, required
+	Plugin 'VundleVim/Vundle.vim'
+	Plugin 'yuttie/comfortable-motion.vim'
+	Plugin 'vim-airline/vim-airline'
+	Plugin 'nathanaelkane/vim-indent-guides'
+	Plugin 'vim-airline/vim-airline-themes'
+	Plugin 'groenewege/vim-less'
+	Plugin 'othree/html5.vim'
+	Plugin 'pangloss/vim-javascript'
+	Plugin 'elzr/vim-json'
+	Plugin 'ctrlpvim/ctrlp.vim'
+	Plugin 'scrooloose/nerdtree'
+	Plugin 'airblade/vim-gitgutter'
+	Plugin 'jistr/vim-nerdtree-tabs'
 
- Plugin 'exvim/ex-autocomplpop'
- Plugin 'bronson/vim-trailing-whitespace'
- Plugin 'Xuyuanp/nerdtree-git-plugin'
+	Plugin 'exvim/ex-autocomplpop'
+	Plugin 'bronson/vim-trailing-whitespace'
+	Plugin 'Xuyuanp/nerdtree-git-plugin'
 
- call vundle#end()            " required
+	call vundle#end()            " required
 else
- echo "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
- echo "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
- echo "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
- echo "You need to get Vundle - 'git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim'"
- echo "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
- echo "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
- echo "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+	echo "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+	echo "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+	echo "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+	echo "You need to get Vundle - 'git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim'"
+	echo "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+	echo "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+	echo "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
 endif
 
 syntax on
@@ -42,8 +42,14 @@ syntax on
 colorscheme gruvbox
 
 let g:airline#extensions#tabline#buffer_idx_mode=1
+let g:airline#extensions#tabline#close_symbol='×'
 let g:airline#extensions#tabline#enabled=1
+let g:airline#extensions#tabline#fnamemod=':t'
 let g:airline#extensions#tabline#show_buffers=0
+let g:airline#extensions#tabline#show_close_button=0
+let g:airline#extensions#tabline#show_splits=0
+let g:airline#extensions#tabline#show_tab_nr=0
+let g:airline#extensions#tabline#show_tab_type=0
 let g:airline#extensions#tabline#show_tabs=1
 let g:ctrlp_cmd='CtrlP'
 let g:ctrlp_map='<c-p>'
@@ -57,8 +63,10 @@ let g:rehash=1
 let g:nerdtree_tabs_open_on_console_startup=1
 
 if executable('ag')
-  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+	let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 endif
+
+map <F7> mzgg=G`z
 
 nmap <leader>1 <Plug>AirlineSelectTab1
 nmap <leader>2 <Plug>AirlineSelectTab2

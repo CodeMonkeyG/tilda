@@ -61,3 +61,7 @@ eval "$(thefuck --alias)"
 if command_exists neofetch ; then
 	neofetch
 fi
+
+
+# added by Anaconda2 5.0.1 installer
+export PATH="/Users/codemonkeyg/anaconda2/bin:$PATH"
