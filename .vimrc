@@ -41,6 +41,9 @@ syntax on
 
 colorscheme gruvbox
 
+let NERDTreeDirArrows = 1
+let NERDTreeMinimalUI = 1
+let NERDTreeQuitOnOpen = 1
 let g:airline#extensions#tabline#buffer_idx_mode=1
 let g:airline#extensions#tabline#close_symbol='×'
 let g:airline#extensions#tabline#enabled=1
@@ -51,16 +54,16 @@ let g:airline#extensions#tabline#show_splits=0
 let g:airline#extensions#tabline#show_tab_nr=0
 let g:airline#extensions#tabline#show_tab_type=0
 let g:airline#extensions#tabline#show_tabs=1
+let g:ctrlp_cache_dir = '~/.cache/ctrlp'
 let g:ctrlp_cmd='CtrlP'
+let g:ctrlp_custom_ignore = 'build\node_modules\|DS_Store\|git'
 let g:ctrlp_map='<c-p>'
 let g:ctrlp_working_path_mode='ra'
-let g:ctrlp_cache_dir = '~/.cache/ctrlp'
 let g:lucius_no_term_bg=1
 let g:molokai_original=1
 let g:netrw_banner=0
 let g:netrw_liststyle=3
 let g:rehash=1
-let g:nerdtree_tabs_open_on_console_startup=1
 
 if executable('ag')
 	let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
@@ -81,6 +84,7 @@ nmap <leader>- <Plug>AirlineSelectPrevTab
 nmap <leader>+ <Plug>AirlineSelectNextTab
 nmap <leader>n :tabnew<cr>
 nmap <leader>q :tabclose<cr>
+nnoremap <Leader>f :NERDTreeToggle<Enter>
 
 set autoindent
 set background=dark
@@ -128,8 +132,6 @@ autocmd BufNewFile,BufRead *.json set conceallevel=0
 autocmd BufWritePre * :FixWhitespace
 autocmd VimEnter * :AirlineTheme base16color
 autocmd VimEnter * :IndentGuidesEnable
-autocmd VimEnter * :NERDTree
-autocmd VimEnter * :NERDTreeTabsOpen
 autocmd VimEnter * :wincmd l
 autocmd InsertEnter * if !exists('w:last_fdm') | let w:last_fdm=&foldmethod | setlocal foldmethod=manual | endif
 autocmd InsertLeave,WinLeave * if exists('w:last_fdm') | let &l:foldmethod=w:last_fdm | unlet w:last_fdm | endif

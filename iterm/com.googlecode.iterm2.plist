@@ -363,7 +363,7 @@
 	<key>Default Bookmark Guid</key>
 	<string>42F8F705-4EB9-45D7-8ECC-EE59DC5AB59E</string>
 	<key>DimBackgroundWindows</key>
-	<true/>
+	<false/>
 	<key>DimInactiveSplitPanes</key>
 	<false/>
 	<key>DimOnlyText</key>
@@ -485,12 +485,14 @@
 	<true/>
 	<key>HideScrollbar</key>
 	<true/>
+	<key>HideTab</key>
+	<true/>
 	<key>HideTabCloseButton</key>
 	<false/>
 	<key>HotkeyMigratedFromSingleToMulti</key>
 	<true/>
 	<key>JobName</key>
-	<false/>
+	<true/>
 	<key>LoadPrefsFromCustomFolder</key>
 	<true/>
 	<key>NSFontPanelAttributes</key>
@@ -546,11 +548,11 @@
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>269 126 606 469 0 0 2560 1080 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>887 316 796 473 0 0 2560 1080 </string>
+	<string>216 377 770 429 0 0 1440 900 </string>
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>467 355 592 584 0 0 2560 1080 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>20 28 1396 852 0 0 1440 900 </string>
+	<string>-216 146 1165 754 0 0 1440 900 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>1288 148 570 379 0 0 2560 1080 </string>
 	<key>NSWindow Frame iTerm Window 10</key>
@@ -575,6 +577,8 @@
 	<array>
 		<dict>
 			<key>ASCII Anti Aliased</key>
+			<true/>
+			<key>Allow Title Reporting</key>
 			<true/>
 			<key>Ambiguous Double Width</key>
 			<false/>
@@ -793,13 +797,13 @@
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.11759774386882782</real>
+				<real>0.10000000000000001</real>
 				<key>Color Space</key>
-				<string>Calibrated</string>
+				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.11759573966264725</real>
+				<real>0.10000000000000001</real>
 				<key>Red Component</key>
-				<real>0.11759927868843079</real>
+				<real>0.10000000000000001</real>
 			</dict>
 			<key>Background Image Location</key>
 			<string></string>
@@ -821,7 +825,7 @@
 			<key>Blur</key>
 			<true/>
 			<key>Blur Radius</key>
-			<real>30</real>
+			<real>2.192857709390863</real>
 			<key>Bold Color</key>
 			<dict>
 				<key>Alpha Component</key>
@@ -1291,7 +1295,7 @@
 			<key>Thin Strokes</key>
 			<integer>0</integer>
 			<key>Transparency</key>
-			<real>0.25126903553299496</real>
+			<real>0.048023080583756345</real>
 			<key>Unicode Version</key>
 			<integer>9</integer>
 			<key>Unlimited Scrollback</key>
@@ -1314,6 +1318,8 @@
 			<string>/Users/giovanialvarez</string>
 		</dict>
 	</array>
+	<key>NoSyncHaveUsedCopyMode</key>
+	<true/>
 	<key>NoSyncHaveWarnedAboutPasteConfirmationChange</key>
 	<true/>
 	<key>NoSyncInstallationId</key>
@@ -1374,7 +1380,7 @@
 		</dict>
 	</dict>
 	<key>PrefsCustomFolder</key>
-	<string>/Users/codemonkeyg/tilda/iterm</string>
+	<string>/Users/codemonkeyg/tilde/iterm</string>
 	<key>Print In Black And White</key>
 	<true/>
 	<key>PromptOnQuit</key>
@@ -1392,7 +1398,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2017-12-08T00:40:23Z</date>
+	<date>2018-01-15T01:18:10Z</date>
 	<key>ShowBookmarkName</key>
 	<false/>
 	<key>ShowFullScreenTabBar</key>
@@ -1402,7 +1408,7 @@
 	<key>ShowPaneTitles</key>
 	<false/>
 	<key>SplitPaneDimmingAmount</key>
-	<real>0.25064102564102564</real>
+	<real>0.59999999999999998</real>
 	<key>TabStyle</key>
 	<integer>1</integer>
 	<key>TabViewType</key>

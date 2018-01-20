@@ -1,5 +1,11 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =3
-let g:netrw_dirhist_1='/Users/codemonkeyg/Repos/KYC/node/selenium'
-let g:netrw_dirhist_2='/Users/codemonkeyg/Repos/KYC/app/js/kyc/views/tabs'
-let g:netrw_dirhist_3='/Users/codemonkeyg/Documents/KYC'
+let g:netrw_dirhist_cnt =9
+let g:netrw_dirhist_1='/Users/codemonkeyg/Repos/KYC/api/application/models'
+let g:netrw_dirhist_2='/Users/codemonkeyg/Repos/KYC'
+let g:netrw_dirhist_3='/Users/codemonkeyg/Repos/KYC/install-scripts'
+let g:netrw_dirhist_4='/Users/codemonkeyg/Repos/KYC/install-scripts/mappings'
+let g:netrw_dirhist_5='/Users/codemonkeyg/Repos/KYC/app-guest/js/kyc'
+let g:netrw_dirhist_6='/Users/codemonkeyg/Repos/KYC/app/html/view-templates'
+let g:netrw_dirhist_7='/Users/codemonkeyg/Repos/KYC/api/application/controllers/cron'
+let g:netrw_dirhist_8='/Users/codemonkeyg/Repos/KYC/app/html/view-templates'
+let g:netrw_dirhist_9='/Users/codemonkeyg/Repos/KYC/app/js/kyc/base'
