@@ -548,11 +548,11 @@
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>269 126 606 469 0 0 2560 1080 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>216 377 770 429 0 0 1440 900 </string>
+	<string>630 1299 918 452 -216 900 1920 1080 </string>
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>467 355 592 584 0 0 2560 1080 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>-216 146 1165 754 0 0 1440 900 </string>
+	<string>-196 926 1879 1034 -216 900 1920 1080 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>1288 148 570 379 0 0 2560 1080 </string>
 	<key>NSWindow Frame iTerm Window 10</key>
@@ -797,13 +797,13 @@
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.10000000000000001</real>
+				<real>0.14007568359375</real>
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.10000000000000001</real>
+				<real>0.14007568359375</real>
 				<key>Red Component</key>
-				<real>0.10000000000000001</real>
+				<real>0.14007568359375</real>
 			</dict>
 			<key>Background Image Location</key>
 			<string></string>
@@ -825,7 +825,7 @@
 			<key>Blur</key>
 			<true/>
 			<key>Blur Radius</key>
-			<real>2.192857709390863</real>
+			<real>30</real>
 			<key>Bold Color</key>
 			<dict>
 				<key>Alpha Component</key>
@@ -1236,6 +1236,8 @@
 			<string>AndaleMono 12</string>
 			<key>Only The Default BG Color Uses Transparency</key>
 			<false/>
+			<key>Open Toolbelt</key>
+			<false/>
 			<key>Option Key Sends</key>
 			<integer>0</integer>
 			<key>Prevent Opening in a Tab</key>
@@ -1245,7 +1247,7 @@
 			<key>Right Option Key Sends</key>
 			<integer>0</integer>
 			<key>Rows</key>
-			<integer>50</integer>
+			<integer>32</integer>
 			<key>Screen</key>
 			<integer>-2</integer>
 			<key>Scrollback Lines</key>
@@ -1295,7 +1297,7 @@
 			<key>Thin Strokes</key>
 			<integer>0</integer>
 			<key>Transparency</key>
-			<real>0.048023080583756345</real>
+			<real>0.11815712246192894</real>
 			<key>Unicode Version</key>
 			<integer>9</integer>
 			<key>Unlimited Scrollback</key>
@@ -1398,7 +1400,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2018-01-15T01:18:10Z</date>
+	<date>2018-01-24T15:45:59Z</date>
 	<key>ShowBookmarkName</key>
 	<false/>
 	<key>ShowFullScreenTabBar</key>
