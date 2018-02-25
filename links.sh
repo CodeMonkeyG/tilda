@@ -1,6 +1,6 @@
 #!/bin/bash
 ln -s ~/tilde/.bashrc ~/.bashrc
-ln -s ~/tilde/.bash_profile ~/.bash_profile
+ln -s ~/tilde/.bashrc ~/.bash_profile
 ln -s ~/tilde/.vim ~/.vim
 ln -s ~/tilde/.vimrc ~/.vimrc
 ln -s ~/tilde/.viminfo ~/.viminfo
