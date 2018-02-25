@@ -168,7 +168,12 @@ function parse_git_dirty {
 }
 
 if command_exists neofetch ; then
-       neofetch
+	clear
+	neofetch
+fi
+
+if [ -z "$TMUX" ]; then
+	tmux
 fi
 
 export CLICOLOR=1
