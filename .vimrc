@@ -21,10 +21,15 @@ if !empty(glob("~/.vim/bundle/Vundle.vim"))
 	Plugin 'scrooloose/nerdtree'
 	Plugin 'airblade/vim-gitgutter'
 	Plugin 'jistr/vim-nerdtree-tabs'
-
-	Plugin 'exvim/ex-autocomplpop'
+	Plugin 'yssl/QFEnter'
 	Plugin 'bronson/vim-trailing-whitespace'
 	Plugin 'Xuyuanp/nerdtree-git-plugin'
+	Plugin 'valloric/youcompleteme'
+	Plugin 'wsdjeg/FlyGrep.vim'
+	Plugin 'dylanaraps/wal.vim'
+	Plugin 'scrooloose/nerdcommenter'
+	Plugin 'w0rp/ale'
+	Plugin 'ryanoasis/vim-devicons'
 
 	call vundle#end()            " required
 else
@@ -40,6 +45,7 @@ endif
 syntax on
 
 colorscheme gruvbox
+" colorscheme molokai
 
 let NERDTreeDirArrows = 1
 let NERDTreeMinimalUI = 1
@@ -67,6 +73,10 @@ let g:molokai_original=1
 let g:netrw_banner=0
 let g:netrw_liststyle=3
 let g:rehash=1
+let g:qfenter_keymap = {}
+let g:qfenter_keymap.vopen = ['<C-v>']
+let g:qfenter_keymap.hopen = ['<C-CR>', '<C-s>', '<C-x>']
+let g:qfenter_keymap.topen = ['<C-t>']
 
 if executable('ag')
 	let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
@@ -97,6 +107,7 @@ set clipboard=unnamed
 set conceallevel=0
 set copyindent
 set cursorline
+set encoding=UTF-8
 set ffs=unix
 set foldmethod=indent
 set ignorecase
@@ -108,12 +119,14 @@ set noeol
 set noro
 set noswapfile
 set nowa
-set number
+set number relativenumber
 set paste
 set readonly!
 set runtimepath+=$HOME~/.vim/j
 set shiftwidth=2
+set signcolumn="yes"
 set smartcase
+set smartindent
 set smarttab
 set softtabstop=2
 set splitbelow
@@ -138,13 +151,18 @@ autocmd VimEnter * :IndentGuidesEnable
 autocmd VimEnter * :wincmd l
 autocmd InsertEnter * if !exists('w:last_fdm') | let w:last_fdm=&foldmethod | setlocal foldmethod=manual | endif
 autocmd InsertLeave,WinLeave * if exists('w:last_fdm') | let &l:foldmethod=w:last_fdm | unlet w:last_fdm | endif
+augroup myvimrc
+	autocmd!
+	autocmd QuickFixCmdPost [^l]* cwindow
+	autocmd QuickFixCmdPost l*    lwindow
+augroup END
 
-command -nargs=1 MS :mksession ~/vimsessions/<args>.vim
-command -nargs=1 SS :mksession! ~/vimsessions/<args>.vim
-command -nargs=1 LS :source ~/vimsessions/<args>.vim
+					command -nargs=1 MS :mksession ~/vimsessions/<args>.vim
+					command -nargs=1 SS :mksession! ~/vimsessions/<args>.vim
+					command -nargs=1 LS :source ~/vimsessions/<args>.vim
 
-hi IndentGuidesOdd ctermbg=234
-hi IndentGuidesEven ctermbg=236
+hi IndentGuidesOdd ctermbg=0
+hi IndentGuidesEven ctermbg=240
 
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
