@@ -46983,7 +46983,7 @@
 	<key>Default Bookmark Guid</key>
 	<string>42F8F705-4EB9-45D7-8ECC-EE59DC5AB59E</string>
 	<key>DimBackgroundWindows</key>
-	<false/>
+	<true/>
 	<key>DimInactiveSplitPanes</key>
 	<false/>
 	<key>DimOnlyText</key>
@@ -46997,7 +46997,7 @@
 	<key>FlashTabBarInFullscreen</key>
 	<true/>
 	<key>FocusFollowsMouse</key>
-	<true/>
+	<false/>
 	<key>GlobalKeyMap</key>
 	<dict>
 		<key>0x19-0x60000</key>
@@ -47177,11 +47177,11 @@
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>269 126 606 469 0 0 2560 1080 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>562 628 928 394 0 0 2560 1080 </string>
+	<string>566 399 796 473 0 0 2048 1152 </string>
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>467 355 592 584 0 0 2560 1080 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>1191 210 878 474 0 0 2560 1080 </string>
+	<string>622 209 878 474 0 0 2048 1152 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>1288 148 570 379 0 0 2560 1080 </string>
 	<key>NSWindow Frame iTerm Window 10</key>
@@ -47449,12 +47449,14 @@
 				<key>Red Component</key>
 				<real>1</real>
 			</dict>
+			<key>Badge Text</key>
+			<string></string>
 			<key>Blink Allowed</key>
 			<false/>
 			<key>Blinking Cursor</key>
 			<true/>
 			<key>Blur</key>
-			<true/>
+			<false/>
 			<key>Blur Radius</key>
 			<real>30</real>
 			<key>Bold Color</key>
@@ -47932,7 +47934,7 @@
 			<key>Thin Strokes</key>
 			<integer>0</integer>
 			<key>Transparency</key>
-			<real>0.16903553299492388</real>
+			<real>0.18461492703045687</real>
 			<key>Unicode Version</key>
 			<integer>9</integer>
 			<key>Unlimited Scrollback</key>
@@ -48037,17 +48039,17 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2018-05-16T08:12:58Z</date>
+	<date>2018-06-08T04:51:06Z</date>
 	<key>ShowBookmarkName</key>
 	<false/>
 	<key>ShowFullScreenTabBar</key>
-	<true/>
+	<false/>
 	<key>ShowNewOutputIndicator</key>
 	<true/>
 	<key>ShowPaneTitles</key>
 	<false/>
 	<key>SplitPaneDimmingAmount</key>
-	<real>0.59999999999999998</real>
+	<real>0.42885116185897432</real>
 	<key>TabStyle</key>
 	<integer>1</integer>
 	<key>TabViewType</key>
@@ -48055,6 +48057,8 @@
 	<key>UKCrashReporterLastCrashReportDate</key>
 	<real>1495119616</real>
 	<key>UseBorder</key>
+	<false/>
+	<key>UseLionStyleFullscreen</key>
 	<false/>
 	<key>WindowNumber</key>
 	<false/>

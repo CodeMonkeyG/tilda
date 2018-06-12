@@ -9,7 +9,6 @@ if !empty(glob("~/.vim/bundle/Vundle.vim"))
 
 	" let Vundle manage Vundle, required
 	Plugin 'VundleVim/Vundle.vim'
-	Plugin 'yuttie/comfortable-motion.vim'
 	Plugin 'vim-airline/vim-airline'
 	Plugin 'nathanaelkane/vim-indent-guides'
 	Plugin 'vim-airline/vim-airline-themes'
@@ -30,6 +29,8 @@ if !empty(glob("~/.vim/bundle/Vundle.vim"))
 	Plugin 'scrooloose/nerdcommenter'
 	Plugin 'w0rp/ale'
 	Plugin 'ryanoasis/vim-devicons'
+	Plugin 'triglav/vim-visual-increment'
+	Plugin 'terryma/vim-smooth-scroll'
 
 	call vundle#end()            " required
 else
@@ -50,9 +51,11 @@ colorscheme gruvbox
 let NERDTreeDirArrows = 1
 let NERDTreeMinimalUI = 1
 let NERDTreeQuitOnOpen = 1
+let NERDTreeShowLineNumbers=1
 let g:NERDTreeWinSize = 80
 let g:NERDTreeMapOpenSplit = '<c-x>'
 let g:NERDTreeMapOpenVSplit = '<c-v>'
+let g:NERDTreeMapOpenInTab = '<c-n>'
 let g:airline#extensions#tabline#buffer_idx_mode=1
 let g:airline#extensions#tabline#close_symbol='×'
 let g:airline#extensions#tabline#enabled=1
@@ -139,18 +142,19 @@ set write
 
 filetype plugin indent on
 
-autocmd BufNewFile,BufRead *.module set filetype=php
-autocmd BufNewFile,BufRead *.js.php set filetype=javascript
+autocmd BufNewFile,BufRead *.css set nocindent
 autocmd BufNewFile,BufRead *.css.php set filetype=css
 autocmd BufNewFile,BufRead *.css.php set nocindent
-autocmd BufNewFile,BufRead *.css set nocindent
+autocmd BufNewFile,BufRead *.js.php set filetype=javascript
 autocmd BufNewFile,BufRead *.json set conceallevel=0
+autocmd BufNewFile,BufRead *.module set filetype=php
 autocmd BufWritePre * :FixWhitespace
+autocmd FileType nerdtree setlocal relativenumber
+autocmd InsertEnter * if !exists('w:last_fdm') | let w:last_fdm=&foldmethod | setlocal foldmethod=manual | endif
+autocmd InsertLeave,WinLeave * if exists('w:last_fdm') | let &l:foldmethod=w:last_fdm | unlet w:last_fdm | endif
 autocmd VimEnter * :AirlineTheme base16color
 autocmd VimEnter * :IndentGuidesEnable
 autocmd VimEnter * :wincmd l
-autocmd InsertEnter * if !exists('w:last_fdm') | let w:last_fdm=&foldmethod | setlocal foldmethod=manual | endif
-autocmd InsertLeave,WinLeave * if exists('w:last_fdm') | let &l:foldmethod=w:last_fdm | unlet w:last_fdm | endif
 augroup myvimrc
 	autocmd!
 	autocmd QuickFixCmdPost [^l]* cwindow
@@ -168,3 +172,7 @@ nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
+noremap <silent> <c-u> :call smooth_scroll#up(&scroll, 0, 2)<CR>
+noremap <silent> <c-d> :call smooth_scroll#down(&scroll, 0, 2)<CR>
+noremap <silent> <c-b> :call smooth_scroll#up(&scroll*2, 0, 4)<CR>
+noremap <silent> <c-f> :call smooth_scroll#down(&scroll*2, 0, 4)<CR>
