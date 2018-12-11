@@ -172,6 +172,11 @@ if command_exists neofetch ; then
 	neofetch
 fi
 
+cat >> ~/.inputrc <<'EOF'
+"\e[A": history-search-backward
+"\e[B": history-search-forward
+EOF
+
 export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
 export PS1="\n┏ \[\e[31m\]\d @ \@\[\e[m\]\n┣ \[\e[36m\][\w]\[\e[m\]\n┗ \[\e[32m\]\u @ \h\[\e[m\]\[\e[33m\]\`parse_git_branch\`\[\e[m\]\[\e[36m\] $ \[\e[m\]"

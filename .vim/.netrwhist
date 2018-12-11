@@ -1,8 +1,3 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =6
-let g:netrw_dirhist_1='/Users/codemonkeyg/vimsessions'
-let g:netrw_dirhist_2='/Users/codemonkeyg'
-let g:netrw_dirhist_3='/Users/codemonkeyg/.ssh'
-let g:netrw_dirhist_4='/Users/codemonkeyg/Repos/KYC/res/elasticdump/lauberge'
-let g:netrw_dirhist_5='/Users/codemonkeyg/Repos/KYC/res/elasticdump'
-let g:netrw_dirhist_6='/Users/codemonkeyg/Documents/KYC'
+let g:netrw_dirhist_cnt =1
+let g:netrw_dirhist_1='/Users/codemonkeyg/Repos/KYC/res/elasticdump/marriott'

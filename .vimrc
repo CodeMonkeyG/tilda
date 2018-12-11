@@ -24,13 +24,15 @@ if !empty(glob("~/.vim/bundle/Vundle.vim"))
 	Plugin 'bronson/vim-trailing-whitespace'
 	Plugin 'Xuyuanp/nerdtree-git-plugin'
 	Plugin 'valloric/youcompleteme'
-	Plugin 'wsdjeg/FlyGrep.vim'
 	Plugin 'dylanaraps/wal.vim'
 	Plugin 'scrooloose/nerdcommenter'
 	Plugin 'w0rp/ale'
 	Plugin 'ryanoasis/vim-devicons'
 	Plugin 'triglav/vim-visual-increment'
 	Plugin 'terryma/vim-smooth-scroll'
+	Plugin 'joonty/vdebug'
+	Plugin 'mattn/emmet-vim'
+	Plugin 'posva/vim-vue'
 
 	call vundle#end()            " required
 else
@@ -77,9 +79,10 @@ let g:netrw_banner=0
 let g:netrw_liststyle=3
 let g:rehash=1
 let g:qfenter_keymap = {}
-let g:qfenter_keymap.vopen = ['<C-v>']
-let g:qfenter_keymap.hopen = ['<C-CR>', '<C-s>', '<C-x>']
-let g:qfenter_keymap.topen = ['<C-t>']
+let g:qfenter_keymap.vopen=['<C-v>']
+let g:qfenter_keymap.hopen=['<C-CR>', '<C-s>', '<C-x>']
+let g:qfenter_keymap.topen=['<C-t>']
+let g:gruvbox_contrast_dark='hard'
 
 if executable('ag')
 	let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
@@ -105,10 +108,9 @@ nnoremap <Leader>f :NERDTreeToggle<Enter>
 set autoindent
 set background=dark
 set backspace=indent,eol,start
-set cindent
+set copyindent
 set clipboard=unnamed
 set conceallevel=0
-set copyindent
 set cursorline
 set encoding=UTF-8
 set ffs=unix
@@ -123,35 +125,35 @@ set noro
 set noswapfile
 set nowa
 set number relativenumber
-set paste
 set readonly!
 set runtimepath+=$HOME~/.vim/j
 set shiftwidth=2
 set signcolumn="yes"
 set smartcase
-set smartindent
 set smarttab
 set softtabstop=2
 set splitbelow
 set splitright
 set ttyfast
 set tabstop=2
+set softtabstop=2
+set shiftwidth=2
 set t_Co=256
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip
 set write
 
-filetype plugin indent on
-
-autocmd BufNewFile,BufRead *.css set nocindent
+autocmd BufNewFile,BufRead * set autoindent
 autocmd BufNewFile,BufRead *.css.php set filetype=css
-autocmd BufNewFile,BufRead *.css.php set nocindent
 autocmd BufNewFile,BufRead *.js.php set filetype=javascript
 autocmd BufNewFile,BufRead *.json set conceallevel=0
 autocmd BufNewFile,BufRead *.module set filetype=php
+
+let g:vue_disable_pre_processors=1
+autocmd FileType vue syntax sync fromstart
+autocmd BufRead,BufNewFile *.vue setlocal filetype=vue.html.javascript.css.less.pug
+
 autocmd BufWritePre * :FixWhitespace
 autocmd FileType nerdtree setlocal relativenumber
-autocmd InsertEnter * if !exists('w:last_fdm') | let w:last_fdm=&foldmethod | setlocal foldmethod=manual | endif
-autocmd InsertLeave,WinLeave * if exists('w:last_fdm') | let &l:foldmethod=w:last_fdm | unlet w:last_fdm | endif
 autocmd VimEnter * :AirlineTheme base16color
 autocmd VimEnter * :IndentGuidesEnable
 autocmd VimEnter * :wincmd l
@@ -167,7 +169,11 @@ augroup END
 
 hi IndentGuidesOdd ctermbg=0
 hi IndentGuidesEven ctermbg=240
+hi Normal ctermbg=none
 
+inoremap <expr> <cr> ((pumvisible())?("\<C-y>"):("\<cr>"))
+
+nnoremap <silent> <esc> :noh<cr><esc>
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
