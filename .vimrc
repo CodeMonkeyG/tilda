@@ -24,16 +24,15 @@ if !empty(glob("~/.vim/bundle/Vundle.vim"))
 	Plugin 'bronson/vim-trailing-whitespace'
 	Plugin 'Xuyuanp/nerdtree-git-plugin'
 	Plugin 'valloric/youcompleteme'
-	Plugin 'dylanaraps/wal.vim'
 	Plugin 'scrooloose/nerdcommenter'
 	Plugin 'w0rp/ale'
 	Plugin 'ryanoasis/vim-devicons'
 	Plugin 'triglav/vim-visual-increment'
-	Plugin 'terryma/vim-smooth-scroll'
 	Plugin 'joonty/vdebug'
 	Plugin 'mattn/emmet-vim'
 	Plugin 'posva/vim-vue'
-
+	Plugin 'flazz/vim-colorschemes'
+	Plugin 'dyng/ctrlsf.vim'
 	call vundle#end()            " required
 else
 	echo "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
@@ -48,7 +47,7 @@ endif
 syntax on
 
 colorscheme gruvbox
-" colorscheme molokai
+" colorscheme solarized
 
 let NERDTreeDirArrows = 1
 let NERDTreeMinimalUI = 1
@@ -83,6 +82,10 @@ let g:qfenter_keymap.vopen=['<C-v>']
 let g:qfenter_keymap.hopen=['<C-CR>', '<C-s>', '<C-x>']
 let g:qfenter_keymap.topen=['<C-t>']
 let g:gruvbox_contrast_dark='hard'
+let g:ctrlsf_regex_pattern = 1
+let g:ctrlsf_auto_preview = 1
+let g:ctrlsf_case_sensitive = 'no'
+let g:ctrlsf_context = '-B 5 -A 5'
 
 if executable('ag')
 	let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
@@ -104,6 +107,20 @@ nmap <leader>+ <Plug>AirlineSelectNextTab
 nmap <leader>n :tabnew<cr>
 nmap <leader>q :tabclose<cr>
 nnoremap <Leader>f :NERDTreeToggle<Enter>
+nnoremap <Leader>v :vsp<space>./<Enter>
+nnoremap <Leader>s :sp<space>./<Enter>
+inoremap <expr> <cr> ((pumvisible())?("\<C-y>"):("\<cr>"))
+nnoremap <silent> <esc> :noh<cr><esc>
+nnoremap <leader>F :CtrlSF<space>
+tnoremap <Esc> <C-\><C-n>
+
+
+
+noremap y "+y
+noremap p "+p
+noremap P "+P
+nnoremap dd "+dd
+vnoremap d "+d
 
 set autoindent
 set background=dark
@@ -117,7 +134,6 @@ set ffs=unix
 set foldmethod=indent
 set ignorecase
 set incsearch
-set lazyredraw
 set mouse=a
 set nobackup
 set noeol
@@ -142,43 +158,32 @@ set t_Co=256
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip
 set write
 
-autocmd BufNewFile,BufRead * set autoindent
-autocmd BufNewFile,BufRead *.css.php set filetype=css
-autocmd BufNewFile,BufRead *.js.php set filetype=javascript
-autocmd BufNewFile,BufRead *.json set conceallevel=0
-autocmd BufNewFile,BufRead *.module set filetype=php
 
 let g:vue_disable_pre_processors=1
-autocmd FileType vue syntax sync fromstart
-autocmd BufRead,BufNewFile *.vue setlocal filetype=vue.html.javascript.css.less.pug
-
-autocmd BufWritePre * :FixWhitespace
-autocmd FileType nerdtree setlocal relativenumber
-autocmd VimEnter * :AirlineTheme base16color
-autocmd VimEnter * :IndentGuidesEnable
-autocmd VimEnter * :wincmd l
 augroup myvimrc
 	autocmd!
 	autocmd QuickFixCmdPost [^l]* cwindow
 	autocmd QuickFixCmdPost l*    lwindow
+	autocmd FileType vue syntax sync fromstart
+	autocmd BufRead,BufNewFile *.vue setlocal filetype=vue.html.javascript.css.less.pug
+
+	autocmd BufNewFile,BufRead * set autoindent
+	autocmd BufNewFile,BufRead *.css.php set filetype=css
+	autocmd BufNewFile,BufRead *.js.php set filetype=javascript
+	autocmd BufNewFile,BufRead *.json set conceallevel=0
+	autocmd BufNewFile,BufRead *.module set filetype=php
+	autocmd BufWritePre * :FixWhitespace
+	autocmd FileType nerdtree setlocal relativenumber
+	autocmd VimEnter * :AirlineTheme base16color
+	autocmd VimEnter * :IndentGuidesEnable
+	autocmd VimEnter * :wincmd l
 augroup END
 
-					command -nargs=1 MS :mksession ~/vimsessions/<args>.vim
-					command -nargs=1 SS :mksession! ~/vimsessions/<args>.vim
-					command -nargs=1 LS :source ~/vimsessions/<args>.vim
+command -nargs=1 MS :mksession ~/vimsessions/<args>.vim
+command -nargs=1 SS :mksession! ~/vimsessions/<args>.vim
+command -nargs=1 LS :source ~/vimsessions/<args>.vim
 
 hi IndentGuidesOdd ctermbg=0
 hi IndentGuidesEven ctermbg=240
 hi Normal ctermbg=none
 
-inoremap <expr> <cr> ((pumvisible())?("\<C-y>"):("\<cr>"))
-
-nnoremap <silent> <esc> :noh<cr><esc>
-nnoremap <C-J> <C-W><C-J>
-nnoremap <C-K> <C-W><C-K>
-nnoremap <C-L> <C-W><C-L>
-nnoremap <C-H> <C-W><C-H>
-noremap <silent> <c-u> :call smooth_scroll#up(&scroll, 0, 2)<CR>
-noremap <silent> <c-d> :call smooth_scroll#down(&scroll, 0, 2)<CR>
-noremap <silent> <c-b> :call smooth_scroll#up(&scroll*2, 0, 4)<CR>
-noremap <silent> <c-f> :call smooth_scroll#down(&scroll*2, 0, 4)<CR>

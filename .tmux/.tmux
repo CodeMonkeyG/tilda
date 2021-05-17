@@ -1,1 +1,1 @@
-/Users/giovannialvarez/tilda/.tmux
+/home/codemonkeyg/tilde/.tmux

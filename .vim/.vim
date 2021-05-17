@@ -1,1 +1,1 @@
-/Users/codemonkeyg/tilda/.vim
+/home/codemonkeyg/tilde/.vim
